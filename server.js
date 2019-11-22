@@ -24,7 +24,7 @@ mongoose.connect(configDB.url, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);
-}); // connect to our database
+}, { useNewUrlParser: true }); // connect to our database
 
 //app.listen(port, () => {
     // MongoClient.connect(configDB.url, { useNewUrlParser: true }, (error, client) => {
