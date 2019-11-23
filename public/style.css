@@ -1,7 +1,25 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+  background-color: rgb(65, 72, 39)
 }
 img{
   height: 200px;
+}
+h1, h2, h3{
+  font-family: 'Calistoga', cursive;
+}
+button, .btn{
+background-color: rgb(190, 82, 37);
+border-radius: 4px
+}
+.page-header{
+  background-color: white;
+  padding-top: 1em;
+}
+h1, h2, .list, .fa-sign-in{
+  color: white
+}
+.top{
+  color: black
 }

@@ -1,21 +1,23 @@
 <!doctype html>
 <html>
 <head>
-    <title>21 Savage Fan Site</title>
+    <title>Library Checkout</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
 
     <div class="page-header text-center">
       <% if (user.local.email === "admin" ) { %>
-        <h1> Library Administration System</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <h1 class="top"> Library Administration System</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Sign Out</a>
       <% } else { %>
         <h1> Library Checkout</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <a href="/logout" class="btn btn-default btn-sm">Sign Out</a>
       <% } %>
     </div>
 
@@ -26,18 +28,14 @@
             <div class="well">
 
                 <% if (user.local.email === "admin" ) { %>
-                  <h3><span class="fa fa-user"></span> Admin</h3>
-                  <p>
-                      <strong>id</strong>: <%= user._id %><br>
-                      <strong>email</strong>: <%= user.local.email %><br>
-                      <strong>password</strong>: <%= user.local.password %>
-                  </p>
+                  <h3> Administrator</h3>
 
-                  <a href="/unlink/local" class="btn btn-default">Unlink</a>
 
                 <% } else { %>
 
-                <h3><span class="fa fa-user"></span> Member</h3>
+                <h3> Member</h3>
+                <% } %>
+
                     <p>
                         <strong>id</strong>: <%= user._id %><br>
                         <strong>email</strong>: <%= user.local.email %><br>
@@ -45,12 +43,14 @@
                     </p>
 
                     <a href="/unlink/local" class="btn btn-default">Unlink</a>
-                    <% } %>
 
 
             </div>
         </div>
         <div class="col-sm-6">
+          <div class="list">
+
+
           <h3>Library Inventory</h3>
           <h4>Title / Author / Available</h4>
           <ul class="messages">
@@ -59,9 +59,11 @@
               <span><%= inventory[i].title %></span>
               <span><%= inventory[i].author %></span>
               <span class="available"><%= inventory[i].available %></span>
+              <i class="fas fa-times"></i>
             </li>
           <% } %>
         </ul>
+        </div>
 
 <% if (user.local.email === "admin") { %>
   <h2>Add Books To Inventory</h2>
