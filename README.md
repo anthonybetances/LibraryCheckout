@@ -1,12 +1,12 @@
 ## Summary
 
-This fullstack app is a 21 Savage fanpage/message board, on which users can log in or sign up in order to create posts or upvote/downvote others' messages.
+This fullstack app is a library checkout system.  Users can see what's currently in the library inventory.  If the user had admin access (user: admin, pw: admin), they can add or delete books to the inventory or update the status from false to true. 
 
-![alt tag](https://github.com/anthonybetances/SavageMasterAuth/blob/master/Screen%20Shot%202019-11-17%20at%2010.15.20%20AM.png)
-![alt tag](https://github.com/anthonybetances/SavageMasterAuth/blob/master/Screen%20Shot%202019-11-17%20at%2010.15.01%20AM.png)
+![alt tag](https://github.com/anthonybetances/LibraryCheckout/blob/master/Screen%20Shot%202019-11-24%20at%207.04.17%20PM.png)
+![alt tag](https://github.com/anthonybetances/LibraryCheckout/blob/master/Screen%20Shot%202019-11-24%20at%207.40.50%20PM.png)
 
 ## How It's Made:
-**Tech used:** HTML, CSS, JavaScript, Node.js, MongoDb, Express Framework.
+**Tech used:** HTML, CSS, JavaScript, Node.js, EJS, MongoDb, Express Framework.
 
 ## Installation
 
