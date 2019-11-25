@@ -54,6 +54,16 @@ module.exports = function(app, passport, db) {
       })
     })
 
+    app.delete('/inventoryUpdate2', (req, res) => {
+      db.collection('libraryInventory').findOneAndDelete({
+        title: req.body.title,
+        author: req.body.author},
+        (err, result) => {
+        if (err) return res.send(500, err)
+        res.send('Message deleted!')
+      })
+    })
+
 //     app.put('/messagesAlt', (req, res) => {
 //   db.collection('messages')
 //   .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
@@ -68,7 +78,7 @@ module.exports = function(app, passport, db) {
 //     res.send(result)
 //   })
 // })
-    // 
+    //
     // app.delete('/messages', (req, res) => {
     //   db.collection('messages').findOneAndDelete({name: req.body.name, msg: req.body.msg}, (err, result) => {
     //     if (err) return res.send(500, err)
